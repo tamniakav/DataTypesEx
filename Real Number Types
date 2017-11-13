@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P02RealNumberTypes
+{
+    class RealNumberTypes
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            if (n < 16)
+            {
+                double doubleNum = double.Parse(Console.ReadLine());
+                Console.WriteLine(doubleNum);
+            }
+            else
+            {
+                decimal floatNum = decimal.Parse(Console.ReadLine());
+                Console.WriteLine("{0}", floatNum);
+
+            }
+        }
+    }
+}
