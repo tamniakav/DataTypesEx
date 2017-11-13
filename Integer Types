@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P01.IntegerTypes
+{
+    class IntegerTypes
+    {
+        static void Main(string[] args)
+        {
+            byte firstNum = byte.Parse(Console.ReadLine());
+            uint secondNum = uint.Parse(Console.ReadLine());
+            long thitdNum = long.Parse(Console.ReadLine());
+            long fourthNum = long.Parse(Console.ReadLine());
+
+            Console.WriteLine("{0} {1} {2} {3}", firstNum, secondNum, thitdNum, fourthNum);
+        }
+    }
+}
