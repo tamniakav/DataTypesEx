@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace _01.AnonymousDownsite
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int securityKey = int.Parse(Console.ReadLine());
+            decimal totalLoss = 0.0m;
+            
+            BigInteger securityToken = securityKey;
+            for (int i = 1; i <= n; i++)
+            {
+                string[] arr = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
+
+                string siteName = arr[0];
+                long siteVisits = long.Parse(arr[1]);
+                decimal pricePreVisit = decimal.Parse(arr[2]);
+
+                totalLoss += (siteVisits * pricePreVisit);
+
+                Console.WriteLine(siteName);
+
+                if (i == n)
+                {
+                    break;
+                }
+
+                securityToken *= securityKey;
+            }
+
+            Console.WriteLine($"Total Loss: {totalLoss:f20}");
+            Console.WriteLine($"Security Token: {securityToken}");
+        }
+    }
+}
