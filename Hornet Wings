@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _02.HornetWings
+{
+    class HornetWings
+    {
+        static void Main(string[] args)
+        {
+            long wingFlaps = long.Parse(Console.ReadLine());
+            double distance = double.Parse(Console.ReadLine());
+            long endurance = long.Parse(Console.ReadLine());
+
+            double travelledDistance = (wingFlaps / 1000) * distance;
+            long flyingTime = wingFlaps / 100;
+            long restTime = (wingFlaps / endurance) * 5;
+
+            long totalTime = flyingTime + restTime;
+
+            Console.WriteLine("{0:f2} m.", travelledDistance);
+            Console.WriteLine("{0} s.", totalTime);
+        }
+    }
+}
