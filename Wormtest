@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _05.Wormtest
+{
+    class Wormtest
+    {
+        static void Main(string[] args)
+        {
+            long length = long.Parse(Console.ReadLine());
+            double windth = double.Parse(Console.ReadLine());
+
+            long cmLength = length * 100;
+            double remainder = cmLength % windth;
+
+            if (remainder > 0)
+            {
+                double sum = (cmLength / windth) * 100;
+                Console.WriteLine("{0:f2}%", sum);
+            }
+            else
+            {
+                double sum = cmLength * windth;
+                Console.WriteLine("{0:f2}", sum);
+            }
+        }
+    }
+}
